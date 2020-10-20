@@ -2,139 +2,105 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>New York Times Search</title>
-  <!-- Bootstrap CSS CDN  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <meta charset="UTF-8">
+    <title>New York Times Search</title>
+    <!-- Bootstrap CSS CDN  -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
 
-  <!-- Font Awesome CSS Icons (For cool glyphicons) -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="style.css">
 
-  <!-- Style to fix the issue of text extending past card length -->
-  <style>
-    .card-body a {
-      word-break: break-all;
-    }
 
-    .articleHeadline {
-      line-height: 1.5;
-    }
-  </style>
 </head>
+
+
 
 <body>
 
-  <!-- Main Bootstrap Search -->
-  <div class="container">
+    <!-- Main Bootstrap Search -->
+    <div class="container">
 
-    <!-- Jumbotron for Title -->
-    <div class="jumbotron" style="background-color: #20315A ; color: white;">
-      <h1 class="text-center">
-        <strong>
-          <i class="fa fa-weather-o"></i> Weather Dashboard</strong>
-      </h1>
-    </div>
-
-    <!-- Row for Searching New York Times -->
-    <div class="row">
-      <div class="col-sm-3">
-        <br>
-        <!-- First card is for handling the search parameters -->
-        <div class="card">
-          <div class="card-header">
-            <strong>
-              <i class="fa fa-city-alt"></i> Search for a City</strong>
-          </div>
-          <div class="card-body">
-
-            <!-- Here we create an HTML Form for handling the inputs-->
-            <form role="form">
-
-              <!-- Here we create the text box for capturing the search term-->
-              <div class="form-group">
-                <label for="search">Search Term:</label>
-                <input type="text" class="form-control" id="search-term">
-              </div>
-
-              <!-- Here we capture the number of records that the user wants to retrieve  -->
-              <div class="form-group">
-                <label for="pwd">Number of Records to Retrieve:</label>
-                <select id="article-count" class="custom-select" aria-labelledby="dropdownMenuButton">
-                  <option selected value="1">1</option>
-                  <!-- Setting the option for 5 as default -->
-                  <option value="5" selected>5</option>
-                  <option value="10">10</option>
-                </select>
-              </div>
-
-              <!-- Here we capture the Start Year Parameter-->
-              <div class="form-group">
-                <label for="start-year">Start Year (Optional):</label>
-                <input type="text" class="form-control" id="start-year">
-              </div>
-
-              <!-- Here we capture the End Year Parameter -->
-              <div class="form-group">
-                <label for="end-year">End Year (Optional):</label>
-                <input type="text" class="form-control" id="end-year">
-              </div>
-
-              <!-- Here we have our final submit button -->
-              <button type="submit" class="btn btn-default" id="run-search">
-                <i class="fa fa-search"></i> Search</button>
-              <button class="btn btn-default" id="clear-all">
-                <i class="fa fa-trash"></i> Clear Results</button>
-
-            </form>
-          </div>
+        <!-- Jumbotron for Title -->
+        <div class="container" style="background-color: rgb(64, 58, 58); color: white; height: 50px">
+            <h1 class="text-center">
+                <strong>
+                    <i class="fa fa-weather-o"></i> Weather Dashboard</strong>
+            </h1>
         </div>
-      </div>
-    </div>
+        
+        <!-- Row for Searching New York Times -->
+        <div class="row">
+            <div class="col-sm-3">
+                <br>
+                <!-- First card is for handling the search parameters -->
+                <div class="card">
+                    <div class="card-header">
+                        <strong>
+                            <i class="fa fa-city-alt card"></i> Search for a City:</strong>
+                        <div class="form-group">
+                            <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+                                <input type="text" name="search2">
+                                <button type="submit"><i class="fa fa-search"></i></button>
 
-    <!-- This row will handle all of the retrieved articles -->
-    <div class="row">
-      <div class="col-sm-12">
-        <br>
-
-        <!-- This card will initially be made up of a card and wells for each of the articles retrieved -->
-        <div class="card">
-
-          <!-- card Heading for the retrieved articles box -->
-          <div class="card-header">
-            <strong>
-              <i class="fa fa-table"></i> Top Articles</strong>
-          </div>
-
-          <!-- This main card will hold each of the resulting articles -->
-          <div class="card-body" id="article-section">
-          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Footer Region -->
-    <div class="row">
-      <div class="col-sm-12">
 
-        <!-- Line Break followed by closing -->
-        <hr>
-        <h5 class="text-center">
-          <small>Made with lots and lots of
-            <i class="fa fa-heart"></i>
-          </small>
-        </h5>
-
-      </div>
-    </div>
-
-  </div>
-
-  <!-- jQuery JS -->
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
-  <!-- Code to the JavaScript File -->
-  <script src="nytCode.js"></script>
+        <!-- jQuery JS -->
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Code to the JavaScript File -->
+        <script src="nytCode.js"></script>
 
 </body>
 
 </html>
+
+<!-- # 06 Server-Side APIs: Weather Dashboard
+
+Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Your challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
+
+Use the [OpenWeather API](https://openweathermap.org/api) to retrieve weather data for cities. The documentation includes a section called "How to start" that will provide basic setup and usage instructions. Use `localStorage` to store any persistent data.
+
+## User Story
+
+```
+Build a weather dashoard 
+```
+
+## Acceptance Criteria
+
+```
+Provide the user the ability to search for a city.
+Show the current and future conditions for that city.
+Present the city name, the date, an icon representation of weather conditions, the temperature, 
+the humidity the wind speed, and the UV index (the color should indicate whether the conditions 
+are favorable, moderate, or severe)
+Add that city to the search history.
+Show the 5-day forecast that displays the date, an icon representation of weather conditions, 
+the temperature, and the humidity.
+Clicking on a city in the search history present the current and future conditions for that city.
+Save search history to local storage and when loading the page present the last searched city forecast
+```
+
+The following image demonstrates the application functionality:
+
+![weather dashboard demo](./Assets/06-server-side-apis-homework-demo.png)
+
+## Review
+
+You are required to submit the following for review:
+
+* The URL of the deployed application.
+
+* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+
+- - -
+© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+ -->
