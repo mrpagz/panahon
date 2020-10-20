@@ -6,6 +6,7 @@ body {
   * {
     box-sizing: border-box;
   }
+
   form.example input[type=text] {
     padding: 1px;
     font-size: 17px;
@@ -31,8 +32,3 @@ body {
     background: #0b7dda;
   }
   
-  /* form.example::after {
-    content: "";
-    clear: both;
-    display: table;
-  } */
