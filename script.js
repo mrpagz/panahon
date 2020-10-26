@@ -135,7 +135,7 @@ function weatherCall(city) {
 
         var lon = JSON.stringify(response.coord.lon);
         var lat = JSON.stringify(response.coord.lat);
-        var UVqueryURL = "http://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&appid=f6f04dedfd17d5950fab75f1f38cb2d3";
+        var UVqueryURL = "http://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&appid=f6f04dedfd17d5950fab75f1f38cb2d3";
 
         $.ajax({
             url: UVqueryURL,
