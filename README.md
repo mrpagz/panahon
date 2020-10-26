@@ -4,7 +4,7 @@ A user can search for a city to view its weather condition such as temperature, 
 
 
 Deployed Application Link
-https://github.com/mrpagz/panahon
+https://mrpagz.github.io/panahon/
 
 
 
