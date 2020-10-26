@@ -1,10 +1,9 @@
 
             
-//Retrieves buttons from local storage or creates an empty array.
+//Retrieve item from local storage
 var historyArray = JSON.parse(localStorage.getItem("searchHistory")) || [];
 
-//Takes the history array's last value and stores it in a variable, then passes it to the weatherCall function to
-//generate weather based on the user's last search when opening the browser.
+//Generates weather of the last city searched
 var lastSearched = (historyArray[historyArray.length - 1]);
 weatherCall(lastSearched);
 
@@ -41,28 +40,6 @@ function getUVIndex(response) {
     UVbutton.text(UVIndex);
     $("#UVIndexDiv").append(UVbutton);
 
-    //Conditions dictating what color the UV Index should be
-    if (UVIndex < 3) {
-        $(UVbutton).removeClass("UVmoderate");
-        $(UVbutton).removeClass("UVsevere");
-        $(UVbutton).removeClass("UVdangerous");
-        $(UVbutton).addClass("UVmild");
-    } else if (UVIndex < 6) {
-        $(UVbutton).removeClass("UVmild");
-        $(UVbutton).removeClass("UVsevere");
-        $(UVbutton).removeClass("UVdangerous");
-        $(UVbutton).addClass("UVmoderate");
-    } else if (UVIndex < 10) {
-        $(UVbutton).removeClass("UVmoderate");
-        $(UVbutton).removeClass("UVmild");
-        $(UVbutton).removeClass("UVdangerous");
-        $(UVbutton).addClass("UVsevere");
-    } else {
-        $(UVbutton).removeClass("UVmoderate");
-        $(UVbutton).removeClass("UVsevere");
-        $(UVbutton).removeClass("UVmild");
-        $(UVbutton).addClass("UVdangerous");
-    };
 }
 
 function getTodaysWeather(response) {
