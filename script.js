@@ -9,12 +9,12 @@ var lastSearched = (historyArray[historyArray.length - 1]);
 weatherCall(lastSearched);
 
 
-//Main search button
+//Search button
 $("#searchButton").on("click", function (event) {
     event.preventDefault;
     var city = $(this).siblings("input").val();
 
-    //Pushes value of city into the history array as long as it has a value
+    //Pushing city into history array
     if (city==="") {
         return;
     } else {
@@ -25,7 +25,7 @@ $("#searchButton").on("click", function (event) {
     weatherCall(city);
 });
 
-//Dynamically generated history buttons
+//Generating history buttons
 $(document).on("click", ".list-group-item", function () {
     var city = $(this).text();
     weatherCall(city);
