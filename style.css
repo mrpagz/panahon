@@ -1,122 +1,122 @@
 .container {
-  width: 100%;
-  margin: auto;
+    width: 100%;
+    margin: auto;
 }
 
 #titleBar {
-  text-align: center;
-  background-color: rgb(51, 51, 51);
-  color: white;
-  padding: 10px;
-  font-size: 29px;
+    text-align: center;
+    background-color: rgb(51, 51, 51);
+    color: white;
+    padding: 10px;
+    font-size: 29px;
 }
 
 #searchSection {
-  background-color: rgb(216, 216, 216);
-  padding-bottom: 20%;
+    background-color: rgb(216, 216, 216);
+    padding-bottom: 20%;
 }
 
 #searchBar {
-  margin-top: 10px;
-  padding-right:65px;
-  padding-bottom:7px;
-  border-radius: 5px;
+    margin-top: 10px;
+    padding-right:65px;
+    padding-bottom:7px;
+    border-radius: 5px;
 }
 
 #previousSearchResults {
-  margin-top: 20px;
-  margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #searchCity {
-  padding-top: 10px;
-  font-size: 2rem;
-  text-align: center;
+    padding-top: 10px;
+    font-size: 2rem;
+    text-align: center;
 }
 
 #fiveDayForecast {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 #fiveDayForecast h1 {
-  font-size: 30px;
+    font-size: 30px;
 }
 
 .card .card-body {
-  padding-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 .weather-card {
-  font-size: 20px;
+    font-size: 20px;
 }
 
 .card-title {
-  padding-bottom:20px;
+    padding-bottom:20px;
 }
 
 .forecastDiv {
-  width: 180px;
-  height: 180px;
-  background-color: rgb(23, 85, 219);
-  border-radius: 10px;
-  float:left;
-  margin-right: 30px;
-  margin-bottom: 30px;
-  padding-top: 10px;
-  padding-left: 10px;
-  color: white;
+    width: 180px;
+    height: 180px;
+    background-color: rgb(23, 85, 219);
+    border-radius: 10px;
+    float:left;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    padding-top: 10px;
+    padding-left: 10px;
+    color: white;
 }
 
 #fiveDayTitle {
-  margin-right:73%;
-  margin-bottom: 50px;
+    margin-right:73%;
+    margin-bottom: 50px;
 }
 
 #UVIndexDiv {
-  float:left;
-  text-align: left;
+    float:left;
+    text-align: left;
 }
 
 .UVmild {
-  background-color: rgb(0, 170, 0);
-  color:white;
-  text-align: center;
-  width:60px;
-  border: solid 1px black;
-  border-radius: 5px;
-  float:right;
-  margin-left: 10px;
+    background-color: rgb(0, 170, 0);
+    color:white;
+    text-align: center;
+    width:60px;
+    border: solid 1px black;
+    border-radius: 5px;
+    float:right;
+    margin-left: 10px;
 }
 
 .UVmoderate {
-  background-color: yellow;
-  color:black;
-  text-align: center;
-  width:60px;
-  border: solid 1px black;
-  border-radius: 5px;
-  float:right;
-  margin-left: 10px;
+    background-color: yellow;
+    color:black;
+    text-align: center;
+    width:60px;
+    border: solid 1px black;
+    border-radius: 5px;
+    float:right;
+    margin-left: 10px;
 }
 
 .UVsevere {
-  background-color: orange;
-  color:black;
-  text-align: center;
-  width:60px;
-  border: solid 1px black;
-  border-radius: 5px;
-  float:right;
-  margin-left: 10px;
+    background-color: orange;
+    color:black;
+    text-align: center;
+    width:60px;
+    border: solid 1px black;
+    border-radius: 5px;
+    float:right;
+    margin-left: 10px;
 }
 
 .UVdangerous {
-  background-color: red;
-  color:white;
-  text-align: center;
-  width:60px;
-  border: solid 1px black;
-  border-radius: 5px;
-  float:right;
-  margin-left: 10px;
+    background-color: red;
+    color:white;
+    text-align: center;
+    width:60px;
+    border: solid 1px black;
+    border-radius: 5px;
+    float:right;
+    margin-left: 10px;
 }
