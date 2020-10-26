@@ -48,7 +48,7 @@ function getTodaysWeather(response) {
     var tempFahrenheit = ((tempKelvin - 273.15) * 9 / 5 + 32).toFixed(2);
     var date = moment().format("l");
 
-    // $("#weather_image").attr("src", "http://openweathermap.org/img/w/" + response.weather[0].icon + ".png");
+    // Display weather information on the page
     $("#cityName").text("City: " + response.name + " " + date);
     $("#temperature").text("Temperature: " + tempFahrenheit + "°F");
     $("#humidity").text("Humidity: " + response.main.humidity + "%");
@@ -65,7 +65,7 @@ function getFiveDayForecast(response) {
     //dayCount allows us to add a day to the current date, increasing by 1 with each iteration of the loop, to get the dates for the next 5 days.
     var index = 0;
     var dayCount = 1;
-    var weatherIcon = "";
+    
 
     for (var i = 0; i < 5; i++) {
         //createForeCastDiv function
@@ -74,16 +74,13 @@ function getFiveDayForecast(response) {
         $("#fiveDaySection").append(forecastDiv);
 
 
-        //createNewDate function
-        //Moment adds a day to the current date and returns the value.
+        
         var nextDate = moment().add(dayCount, "day");
-
-        //Turn the value that moment.js gives us into a string so we can use substring on it.
         nextDate = String(nextDate);
 
         //Use substring on the nextDate string to grab the relevant data from it.
         var nextDateSubString = nextDate.substring(0, 15);
-        // console.log(nextDateSubString);
+       
 
         //Create a header to fill with the date
         var dateHeader = $("<h5>");
@@ -104,7 +101,7 @@ function getFiveDayForecast(response) {
         forecastDiv.append(weatherIconImage);
 
 
-        //createDailyTemp
+        
         //Get the temp from the JSON object and convert it to Fahrenheit.
         var tempKelvin = response.list[index].main.temp;
         var tempFahrenheit = ((tempKelvin - 273.15) * 9 / 5 + 32).toFixed(2);
@@ -126,7 +123,7 @@ function getFiveDayForecast(response) {
         index += 8;
     }
 };
-
+//AJAX Calls
 function weatherCall(city) {
     var todayQueryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=f6f04dedfd17d5950fab75f1f38cb2d3";
 
