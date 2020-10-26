@@ -136,9 +136,9 @@ function weatherCall(city) {
     }).then(function (response) {
         getTodaysWeather(response);
 
-        var longitude = JSON.stringify(response.coord.lon);
-        var latitude = JSON.stringify(response.coord.lat);
-        var UVqueryURL = "http://api.openweathermap.org/data/2.5/uvi?lat=" + latitude + "&lon=" + longitude + "&appid=f6f04dedfd17d5950fab75f1f38cb2d3";
+        var lon = JSON.stringify(response.coord.lon);
+        var lat = JSON.stringify(response.coord.lat);
+        var UVqueryURL = "http://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&appid=f6f04dedfd17d5950fab75f1f38cb2d3";
 
         $.ajax({
             url: UVqueryURL,
@@ -168,10 +168,10 @@ function renderHistory() {
             $(".list-group").prepend(recentButton);
         };
 
-    //Stores the generated button in local storage.
+    //Storing in local storage
     localStorage.setItem("searchHistory", JSON.stringify(historyArray));
 
-    //Clears input box
+    //Clears input
     $("input").val("");
 };
 
