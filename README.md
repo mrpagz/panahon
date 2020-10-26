@@ -7,4 +7,4 @@ Deployed Application Link
 https://github.com/mrpagz/panahon
 
 
-img
+<img src="Assets/image.JPG" alt="Weather Dashboard">
